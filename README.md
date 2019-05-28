@@ -1,6 +1,7 @@
 #### To-dos:
 
 - [ ] Allow search in interface.
+- [ ] Mobile friendly.
 - [ ] Config deploy do Github Pages.
   - Add link to demo in github repo and in README
 - [ ] Write README.
