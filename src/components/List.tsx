@@ -33,7 +33,7 @@ const List: FunctionComponent<Props> = ({ title, gridMode = false }) => {
 
   return (
     <>
-      <div className="list__title">{title} <img src="/arrow-forward.svg" /></div>
+      <div className="list__title">{title} <img src="arrow-forward.svg" /></div>
 
       <Group
         className={`list ${gridMode ? ' grid' : ''}`}

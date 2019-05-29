@@ -6,31 +6,31 @@ interface Serie {
 const seriesData: Serie[] = [
   {
     title: 'Black Mirror',
-    image: '/black-mirror-thumb.jpg'
+    image: 'black-mirror-thumb.jpg'
   },
   {
     title: 'How To Get Away With Murder',
-    image: '/htgawm-thumb.jpg'
+    image: 'htgawm-thumb.jpg'
   },
   {
     title: 'Orphan Black',
-    image: '/orphan-black-thumb.jpg'
+    image: 'orphan-black-thumb.jpg'
   },
   {
     title: 'The Sinner',
-    image: '/the-sinner-thumb.jpg'
+    image: 'the-sinner-thumb.jpg'
   },
   {
     title: 'Stranger Things',
-    image: '/stranger-things-thumb.jpg'
+    image: 'stranger-things-thumb.jpg'
   },
   {
     title: 'Love, Death + Robots',
-    image: '/LDR-thumb.jpg'
+    image: 'LDR-thumb.jpg'
   },
   {
     title: 'Lucifer',
-    image: '/lucifer-thumbnail.jpg'
+    image: 'lucifer-thumbnail.jpg'
   }
 ]
 

@@ -23,7 +23,7 @@ const Navbar: FunctionComponent<Props> = ({ expanded }) => {
         <Tabbable
           className="logo"
           as="img"
-          src="/netflix-logo.png"
+          src="netflix-logo.png"
           alt="Netflix-logo"
           onClick={handleLogoClick}
         />
@@ -31,11 +31,11 @@ const Navbar: FunctionComponent<Props> = ({ expanded }) => {
 
       <div className="navbar-right">
         <Tabbable as="div" className="search-button">
-          <img src="/search-icon.svg" className="icon" />{' '}
+          <img src="search-icon.svg" className="icon" />{' '}
           Search...
         </Tabbable>
         <Tabbable as="a" href="https://github.com/httpiago/navbar-as-splashscreen-demo">
-          <img src="/github-icon.svg" className="icon" title="View source on GitHub" />
+          <img src="github-icon.svg" className="icon" title="View source on GitHub" />
         </Tabbable>
         <Tabbable as="a" href="https://www.iagobruno.com/">
           <img src="https://github.com/httpiago.png?size=40" className="avatar" />
