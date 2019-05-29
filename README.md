@@ -1,11 +1,13 @@
 <p align="center">
-  A simple Netflix clone to demonstrate a concept of a splash screen that turns into a navbar<br> after page load is complete.
+  A simple Netflix clone to demonstrate a concept of a splash screen that turns into<br> a navbar after page load is complete.
 </p>
 <p align="center">
   <a href="https://httpiago.github.io/navbar-as-splashscreen-demo/"><img src="https://img.shields.io/badge/Online-Demo-brightgreen.svg"></a>
 </p>
 <p align="center">
-  <img src="/static/demo.gif?raw=true" width="640" alt="Demo video">
+  <a href="https://httpiago.github.io/navbar-as-splashscreen-demo/">
+    <img src="/static/demo.gif" width="640" alt="Demo video">
+  </a>
 </p>
 
 ## Packages and tools used
