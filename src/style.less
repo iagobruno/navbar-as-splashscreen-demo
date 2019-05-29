@@ -42,14 +42,30 @@ a {
   .links,
   .navbar-right {
     transition-delay: 0ms;
+    transition-duration: 0ms;
     opacity: 0;
   }
 }
 
-.logo {
-  display: block;
-  max-height: 50%;
-  cursor: pointer;
+.logo__wrapper {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .logo {
+    max-height: 50%;
+    max-width: 100%;
+    cursor: pointer;
+    transition: transform 1000ms ease;
+    transform: scale(1);
+    transform-origin: left;
+  }
+}
+
+.navbar--expanded .logo {
+  pointer-events: none;
 }
 
 .links {
@@ -75,7 +91,7 @@ a {
 .navbar-right {
   width: calc(100% / 3);
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   align-items: center;
 
   .icon {
@@ -115,6 +131,7 @@ a {
   text-align: center;
   font-size: 16px;
   opacity: .7;
+  padding: 0 16px;
   margin-bottom: 24px;
 }
 
@@ -151,24 +168,13 @@ a {
   background-color: rgba(255, 255, 255, .1);
   margin-right: 20px;
   position: relative;
-  height: 200px;
   width: 355px;
   outline: 4px solid transparent;
   transition: transform 300ms ease, margin 300ms ease;
 
-  &:focus {
-    transform: scale(1.4);
-    margin: 0 94px 0 70px;
-    outline-color: @white;
-
-    .thumbnail__title {
-      visibility: visible;
-    }
-  }
-
   img {
-    height: inherit;
     width: inherit;
+    max-width: inherit;
     display: block;
   }
 
@@ -183,5 +189,55 @@ a {
     right: 0;
     left: 0;
     z-index: 5;
+  }
+
+  &:focus .thumbnail__title {
+    visibility: visible;
+  }
+}
+
+body:not(.is-mobile) .thumbnail:focus {
+  transform: scale(1.4);
+  margin: 0 94px 0 70px;
+  outline-color: @white;
+}
+
+
+.is-mobile {
+  .navbar {
+    padding: 0 12px;
+  }
+
+  .navbar.navbar--expanded .logo {
+    transform: scale(1.3);
+  }
+
+  .name {
+    display: none;
+  }
+
+  .search-button {
+    display: none;
+  }
+
+  .links > * {
+    display: none;
+  }
+
+  .navbar-right > * {
+    margin-left: 12px;
+  }
+
+  .list {
+    overflow-x: auto;
+    padding: 0 12px;
+  }
+
+  .list__title {
+    margin-left: 12px;
+  }
+
+  .thumbnail {
+    max-width: 80vw;
   }
 }

@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState, useRef } from 'react'
 import { Group, Rover, useRoverState } from 'reakit'
-import { shuffle } from '../utils'
+import { shuffle, isMobile } from '../utils'
 import seriesData from '../data'
 
 import Thumbnail from './Thumbnail';
@@ -15,8 +15,10 @@ const List: FunctionComponent<Props> = ({ title, gridMode = false }) => {
   const [series] = useState(() => shuffle(seriesData))
   const rover = useRoverState({ loop: true, orientation: 'horizontal' })
   const wrapperRef = useRef<HTMLDivElement>(null)
-console.log('rendred')
+
   function handleThumbFocus(index: number) {
+    if (isMobile) return;
+
     // Colocar o elemento em foco alinhado a esquerda da tela
     const originalWidth = (355 + 20)
     wrapperRef.current.style.left = `-${originalWidth * index}px`

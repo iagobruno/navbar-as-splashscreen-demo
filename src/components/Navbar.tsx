@@ -19,13 +19,15 @@ const Navbar: FunctionComponent<Props> = ({ expanded }) => {
         <Tabbable as={'li'}>My list</Tabbable>
       </div>
 
-      <Tabbable
-        className="logo"
-        as="img"
-        src="/netflix-logo.png"
-        alt="Netflix-logo"
-        onClick={handleLogoClick}
-      />
+      <div className="logo__wrapper">
+        <Tabbable
+          className="logo"
+          as="img"
+          src="/netflix-logo.png"
+          alt="Netflix-logo"
+          onClick={handleLogoClick}
+        />
+      </div>
 
       <div className="navbar-right">
         <Tabbable as="div" className="search-button">
@@ -36,7 +38,7 @@ const Navbar: FunctionComponent<Props> = ({ expanded }) => {
           <img src="/github-icon.svg" className="icon" title="View source on GitHub" />
         </Tabbable>
         <Tabbable as="a" href="https://www.iagobruno.com/">
-          <img src="https://github.com/httpiago.png" className="avatar" />
+          <img src="https://github.com/httpiago.png?size=40" className="avatar" />
           <span className="name">By<br/>Iago Bruno</span>
         </Tabbable>
       </div>
