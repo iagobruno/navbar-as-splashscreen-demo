@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState, useRef } from 'react'
+import React, { FunctionComponent, useMemo, useRef } from 'react'
 import { Group, Rover, useRoverState } from 'reakit'
 import { shuffle, isMobile } from '../utils'
 import seriesData from '../data'
@@ -12,16 +12,12 @@ type Props = {
 }
 
 const List: FunctionComponent<Props> = ({ title, gridMode = false }) => {
-  const [series] = useState(() => shuffle(seriesData))
+  const series = useMemo(() => shuffle(seriesData), [])
   const rover = useRoverState({ loop: true, orientation: 'horizontal' })
   const wrapperRef = useRef<HTMLDivElement>(null)
 
   function handleThumbFocus(index: number) {
     if (isMobile) return;
-
-    // Colocar o elemento em foco alinhado a esquerda da tela
-    const originalWidth = (355 + 20)
-    wrapperRef.current.style.left = `-${originalWidth * index}px`
 
     // Colocar a lista no centro vertical da tela (movendo o scroll da página)
     const navbarHeight = 72 / 2
@@ -29,6 +25,10 @@ const List: FunctionComponent<Props> = ({ title, gridMode = false }) => {
     const halfHeightOfWindow = window.innerHeight / 2
     const scrollTop = wrapperRef.current.offsetTop - navbarHeight - halfHeightOfWindow + halfHeightOfWrapper
     window.scrollTo(0, scrollTop)
+
+    // Colocar o elemento em foco alinhado a esquerda da tela
+    const originalWidth = (355 + 20)
+    wrapperRef.current.style.left = `-${originalWidth * index}px`
   }
 
   return (

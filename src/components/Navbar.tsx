@@ -7,16 +7,16 @@ type Props = {
 }
 
 const Navbar: FunctionComponent<Props> = ({ expanded }) => {
-  const handleLogoClick = () => {
+  function handleLogoClick() {
     window.location.reload()
   }
 
   return (
     <div className={'navbar' + (expanded ? ' navbar--expanded' : '')}>
       <div className="links">
-        <Tabbable as={'li'} className="selected">Home</Tabbable>
-        <Tabbable as={'li'}>Recently added</Tabbable>
-        <Tabbable as={'li'}>My list</Tabbable>
+        <Tabbable as="li" className="selected">Home</Tabbable>
+        <Tabbable as="li">Recently added</Tabbable>
+        <Tabbable as="li">My list</Tabbable>
       </div>
 
       <div className="logo__wrapper">
@@ -31,8 +31,7 @@ const Navbar: FunctionComponent<Props> = ({ expanded }) => {
 
       <div className="navbar-right">
         <Tabbable as="div" className="search-button">
-          <img src="search-icon.svg" className="icon" />{' '}
-          Search...
+          <img src="search-icon.svg" className="icon" />{' Search...'}
         </Tabbable>
         <Tabbable as="a" href="https://github.com/httpiago/navbar-as-splashscreen-demo">
           <img src="github-icon.svg" className="icon" title="View source on GitHub" />
@@ -45,6 +44,5 @@ const Navbar: FunctionComponent<Props> = ({ expanded }) => {
     </div>
   )
 }
-
 
 export default Navbar
