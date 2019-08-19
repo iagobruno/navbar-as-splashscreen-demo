@@ -12,11 +12,11 @@
 
 ## Packages and tools used
 
-- [TypeScript](https://www.typescriptlang.org/): To type the codes and components.
+- [TypeScript](https://www.typescriptlang.org/): To ensure code type-safety.
 - [ReactJS](https://reactjs.org/): Separate the interface into components.
 - [Parcel](https://parceljs.org/) ❤: To bundle the application.
 - [Reakit](https://reakit.io/): To allow keyboard navigation.
-- [less](http://lesscss.org/): Preprocess CSS.
+- [less](http://lesscss.org/): Pre-process CSS.
 
 ## Installation
 
