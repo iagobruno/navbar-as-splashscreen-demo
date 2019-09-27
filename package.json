@@ -1,11 +1,11 @@
 {
-  "homepage": "https://httpiago.github.io/navbar-as-splashscreen-demo/",
-  "repository": "https://github.com/httpiago/navbar-as-splashscreen-demo.git",
+  "homepage": "https://iagobruno.github.io/navbar-as-splashscreen-demo/",
+  "repository": "https://github.com/iagobruno/navbar-as-splashscreen-demo.git",
   "author": "Iago Bruno <httpiago@gmail.com> (https://www.iagobruno.com/)",
   "license": "MIT",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "del-cli dist && parcel build src/index.html --public-url https://httpiago.github.io/navbar-as-splashscreen-demo/",
+    "build": "del-cli dist && parcel build src/index.html --public-url https://iagobruno.github.io/navbar-as-splashscreen-demo/",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d dist"
   },
