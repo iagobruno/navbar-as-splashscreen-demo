@@ -1,7 +1,7 @@
 {
   "homepage": "https://iagobruno.github.io/navbar-as-splashscreen-demo/",
   "repository": "https://github.com/iagobruno/navbar-as-splashscreen-demo.git",
-  "author": "Iago Bruno <httpiago@gmail.com> (https://www.iagobruno.com/)",
+  "author": "Iago Bruno <httpiago@gmail.com> (https://www.iagobruno.dev/)",
   "license": "MIT",
   "scripts": {
     "start": "parcel src/index.html",

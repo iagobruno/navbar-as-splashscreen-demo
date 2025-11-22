@@ -36,7 +36,7 @@ const Navbar: FunctionComponent<Props> = ({ expanded }) => {
         <Tabbable as="a" href="https://github.com/iagobruno/navbar-as-splashscreen-demo">
           <img src="github-icon.svg" className="icon" title="View source on GitHub" />
         </Tabbable>
-        <Tabbable as="a" href="https://www.iagobruno.com/">
+        <Tabbable as="a" href="https://iagobruno.dev/">
           <img src="https://github.com/iagobruno.png?size=40" className="avatar" />
           <span className="name">By<br/>Iago Bruno</span>
         </Tabbable>
